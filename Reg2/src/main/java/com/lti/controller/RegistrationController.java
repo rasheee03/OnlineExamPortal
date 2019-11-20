@@ -10,6 +10,7 @@ import com.lti.model.Courses;
 import com.lti.model.Options;
 import com.lti.model.QuestionBank;
 import com.lti.model.Registration;
+import com.lti.service.CourseService;
 import com.lti.service.LoginService;
 import com.lti.service.QuestionService;
 import com.lti.service.RegistrationService;
@@ -26,6 +27,9 @@ public class RegistrationController {
 	
 	@Autowired 
 	private QuestionService queService;
+	
+	@Autowired
+	private CourseService courseService;
 	
 	//================================================================
 	
@@ -57,11 +61,13 @@ public class RegistrationController {
 		//================================================================
 	 
 	 @RequestMapping(path = "question.lti", method = RequestMethod.POST)
-	 private String addQuestions(QuestionBank qb,Options op,Courses c)
-	 {
-		 queService.addQuest(qb);
-		 queService.addOptions(op);
-		 queService.addCourse(c);
+	 private String addQuestions(QuestionBank qb, Options op ,@RequestParam(value="cName") Courses course)
+	 {	 
+		 
+		 
+    	 queService.addQuest(qb,course);
+//		 queService.addOptions(op);
+//		 queService.addCourse(c);
 		 
 		 return "AddQuestions.jsp";
 	 }
