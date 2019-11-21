@@ -19,7 +19,7 @@ Options:
 <input type="radio"  name="level" value="1" id="l1"></input>  level 1
  <input type="radio"  name="level" value="2"  id="l2"></input> level 2
  <input type="radio"  name="level" value="3" id="l3"></input>  level 3
- 
+ <input type="checkbox" name="isCorrectAnswer" value=""
  Course ID : 
  
  <select name="courses.id">
