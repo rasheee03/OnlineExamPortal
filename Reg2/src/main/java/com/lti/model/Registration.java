@@ -7,8 +7,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -16,48 +18,36 @@ import javax.persistence.Table;
 	public class Registration {
 
 		
-		@Id
-		@GeneratedValue
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "opt_seq_mapping")
+	@SequenceGenerator(name = "opt_seq_mapping", sequenceName = "opt_seq", allocationSize = 1)
+	
 		private int id;
 		private String name;
 		private String email;
 		private String password;
 		private long mobile;
 		private String qualification;
-		private LocalDate dateOfBirth;
+		private String yearOfCompletion;
+		private String dateOfBirth;
+		
 		private String city;
 		private String state;
+		private String captcha;
+		private String role;
 		
 	
 		@OneToOne( mappedBy="registration", cascade=CascadeType.ALL)
 		private Login login;
 		
-		
-public Login getLogin() {
+		public Login getLogin() {
 			return login;
 		}
 		public void setLogin(Login login) {
 			this.login = login;
 		}
-		//		private String captcha;
-//		private String role;
-//		
-//		public String getRole() {
-//			return role;
-//		}
-//		public void setRole(String role) {
-//			this.role = role;
-//		}
-//		@OneToOne(fetch = FetchType.LAZY, optional = false)
-//		@JoinColumn(name = "userid", nullable = false)
-//		private Login login;
-//		
-//		public Login getLogin() {
-//			return login;
-//		}
-//		public void setLogin(Login login) {
-//			this.login = login;
-//		}
+
 		public int getId() {
 			return id;
 		}
@@ -96,7 +86,15 @@ public Login getLogin() {
 			this.qualification = qualification;
 		}
 		
-	
+		public String getYearOfCompletion() {
+			return yearOfCompletion;
+		}
+		public void setYearOfCompletion(String yearOfCompletion) {
+			this.yearOfCompletion = yearOfCompletion;
+		}
+		public void setDateOfBirth(String dateOfBirth) {
+			this.dateOfBirth = dateOfBirth;
+		}
 	
 		public String getCity() {
 			return city;
@@ -111,12 +109,20 @@ public Login getLogin() {
 			this.state = state;
 		}
 	
-		public LocalDate getDateOfBirth() {
-			return dateOfBirth;
+		public String getCaptcha() {
+			return captcha;
 		}
-		public void setDateOfBirth(LocalDate dateOfBirth) {
-			this.dateOfBirth = dateOfBirth;
+		public void setCaptcha(String captcha) {
+			this.captcha = captcha;
 		}
+		public String getRole() {
+			return role;
+		}
+		public void setRole(String role) {
+			this.role = role;
+		}
+		
+		
 		
 
 		

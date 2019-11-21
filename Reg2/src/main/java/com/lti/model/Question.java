@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="QuestionBank")
-public class QuestionBank {
+public class Question {
 	
 		@Id
 		@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "qb_seq_mapping")
@@ -27,18 +27,18 @@ public class QuestionBank {
 		
 		@ManyToOne
 		@JoinColumn(name="cid")
-		private Courses courses;
+		private Course courses;
 
 		@OneToMany(mappedBy = "questionBank", cascade = CascadeType.ALL)
-		private List<Options> options;
+		private List<Option> options;
 		
 		@Column(name = "lvl")
 		private int level;
 
-		public List<Options> getOptions() {
+		public List<Option> getOptions() {
 			return options;
 		}
-		public void setOptions(List<Options> options) {
+		public void setOptions(List<Option> options) {
 			this.options = options;
 		}
 		public int getQid() {
@@ -57,11 +57,11 @@ public class QuestionBank {
 			this.question = question;
 		}
 
-		public Courses getCourses() {
+		public Course getCourses() {
 			return courses;
 		}
 
-		public void setCourses(Courses courses) {
+		public void setCourses(Course courses) {
 			this.courses = courses;
 		}
 

@@ -2,13 +2,13 @@ package com.lti.repository;
 
 import org.springframework.stereotype.Repository;
 
-import com.lti.model.Options;
+import com.lti.model.Option;
 
 @Repository
 public class OptionRepository {
 	
 	
-	public void add(Options o)
+	public void add(Option o)
 
 	{
 		

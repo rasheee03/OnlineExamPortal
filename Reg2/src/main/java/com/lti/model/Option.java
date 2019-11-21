@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Options")
-public class Options {
+public class Option {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "opt_seq_mapping")
@@ -20,7 +20,7 @@ public class Options {
 	
 	@ManyToOne
 	@JoinColumn(name="qid")
-	private QuestionBank questionBank;
+	private Question questionBank;
 	
 	private char isCorrectAnswer;
 	
@@ -34,11 +34,11 @@ public class Options {
 		this.opid = opid;
 	}
 
-	public QuestionBank getQuestionBank() {
+	public Question getQuestionBank() {
 		return questionBank;
 	}
 
-	public void setQuestionBank(QuestionBank questionBank) {
+	public void setQuestionBank(Question questionBank) {
 		this.questionBank = questionBank;
 	}
 

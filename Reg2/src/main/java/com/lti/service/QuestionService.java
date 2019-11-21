@@ -1,40 +1,58 @@
 package com.lti.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.model.Courses;
-import com.lti.model.Options;
-import com.lti.model.QuestionBank;
-import com.lti.repository.QuestionBankRepository;
+import com.lti.model.Course;
+import com.lti.model.Option;
+import com.lti.model.Question;
+import com.lti.repository.QuestionRepository;
 
 @Service
 public class QuestionService {
 
 	@Autowired
-	private QuestionBankRepository questRepo;
+	private QuestionRepository questRepo;
 	
 	@Transactional
-		public void addQuest(QuestionBank qb)
+		public void addQuest(String q1,String op,int lvl,Course c1,char a)
 		{
-			Courses c = questRepo.fetchCourse(qb.getCourses().getCid());
-			qb.setCourses(c);
-			
-			for(Options op : qb.getOptions())
-				op.setQuestionBank(qb);
-			
-			questRepo.add(qb);
+		
+		//Course c = questRepo.fetchCourse(q.getCourses().getCid());		
+		Question q = new Question();
+		q.setCourses(c1);
+		q.setQuestion(q1);
+		q.setLevel(lvl);
+		
+		Option o1 = new Option();
+		List<Option> o=new ArrayList<Option>();
+		
+		for(Option i: o )
+		{
+			i.setDescription(op);
+			i.setQuestionBank(q);
+			i.setIsCorrectAnswer(a);
+
+		}
+		o.add(o1);
+		q.setOptions(o);
+	
+
+		questRepo.add(q);
+		
+		
+//			Course c = questRepo.fetchCourse(qb.getCourses().getCid());
+//			qb.setCourses(c);
+//			
+//			for(Option op : qb.getOptions())
+//				op.setQuestionBank(qb);
+//			
+//			questRepo.add(qb);
 		}
 		
-		public void addOptions()
-		{
-			
-		}
-		 
-		public void addCourse()
-		{
-			
-		}
-	
+		
 }

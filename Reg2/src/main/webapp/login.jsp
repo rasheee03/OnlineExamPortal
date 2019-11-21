@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-<form method="post" action="login.lti" modelAttribute="login">
+<form method="post" action="login.lti" >
 email id: <input type="text" name="email" /> <br /> 
 password <input type="password" name="password" /> <br /> 
 <button type="submit" > Login</button>
+
 </form>
+
+
 </body>
 </html>
