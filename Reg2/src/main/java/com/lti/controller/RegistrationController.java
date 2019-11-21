@@ -61,11 +61,11 @@ public class RegistrationController {
 		//================================================================
 	 
 	 @RequestMapping(path = "question.lti", method = RequestMethod.POST)
-	 private String addQuestions(QuestionBank qb, Options op ,@RequestParam(value="cName") Courses course)
+	 private String addQuestions(QuestionBank qb)
 	 {	 
 		 
 		 
-    	 queService.addQuest(qb,course);
+    	 queService.addQuest(qb);
 //		 queService.addOptions(op);
 //		 queService.addCourse(c);
 		 

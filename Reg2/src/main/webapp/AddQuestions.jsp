@@ -10,19 +10,17 @@
 <form method="post" action="question.lti" >
 Enter Question <input type="text" name="question" /> <br /> 
 
- <input type="checkbox" name="op"  id="op1">
-<input type="text" for="op1"/> <br/>
-<input type="checkbox" name="op"  id="op2">
-<input type="text" for="op2"/> <br/>
-<input type="checkbox" name="op" id="op3">
-<input type="text" for="op3"/> <br/>
-<input type="checkbox" name="op"  id="op4">
-<input type="text" for="op4"/> <br/>
+<input type="text" name = "options[0].description" for="op1"/> <br/>
+<input type="text" name = "options[1].description" for="op2"/> <br/>
+<input type="text" name = "options[2].description" for="op3"/> <br/>
+<input type="text" name = "options[3].description" for="op4"/> <br/>
 
-<input type="radio"  name="level"  id="l1"></input> </input> level 1
- <input type="radio"  name="level"   id="l2"></input> </input>level 2
- <input type="radio"  name="level"  id="l3"></input> </input> level 3
+<input type="radio"  name="level" value="1" id="l1"></input> </input> level 1
+ <input type="radio"  name="level" value="2"  id="l2"></input> </input>level 2
+ <input type="radio"  name="level" value="3" id="l3"></input> </input> level 3
  
+ Course ID : 
+ <input type="text" name="courses.id" />
 
  <button type="submit" > Add Question</button>
 </form>

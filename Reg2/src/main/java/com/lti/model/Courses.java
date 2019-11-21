@@ -6,14 +6,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Courses")
+@Table(name="Course")
 public class Courses {
 
 	@Id
 	@GeneratedValue
 	private int cid;
 	
-	private String cName;
+	private String name;
 
 	public int getCid() {
 		return cid;
@@ -23,14 +23,13 @@ public class Courses {
 		this.cid = cid;
 	}
 
-	public String getcName() {
-		return cName;
-	}
-
-	public void setcName(String cName) {
-		this.cName = cName;
+	public String getName() {
+		return name;
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	
 	
