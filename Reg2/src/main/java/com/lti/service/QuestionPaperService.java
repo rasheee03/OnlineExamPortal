@@ -14,9 +14,9 @@ public class QuestionPaperService {
 	@Autowired
 	private QuestionPaperRepository quesPaperRepo; 
 	
-	public List<Question> fetchPaper(int c){
-		List<Question> q1 = quesPaperRepo.fetchQuestions(c);
-		return q1;
+//	public List<Question> fetchPaper(int c){
+//		List<Question> q1 = quesPaperRepo.fetchQuestions(c);
+//		return q1;
 		
 //		for(Question q : q1)
 //		{
@@ -26,5 +26,5 @@ public class QuestionPaperService {
 //			q.getQuestion();
 //		}
 		 
-	}
+	//}
 }

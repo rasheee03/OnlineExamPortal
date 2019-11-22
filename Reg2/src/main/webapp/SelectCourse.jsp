@@ -10,11 +10,11 @@
 <form method="post" action="qp.lti">
 Select course <br/>
 
-java  <input type="radio"  name="id"  value="java"  id="1"><br />
-python <input type="radio"  name="id" value="python"   id="2"> <br />
-c++ <input type="radio"  name="id"   value="c++"  id="3"> <br />
-Dbms <input type="radio"  name="id"  value="Dbms"  id="4"> <br />
-Html <input type="radio"  name="id"  value="Html"  id="5"> <br />
+java  <input type="radio"  name="id"  value="1"  id="1"><br />
+python <input type="radio"  name="id" value="2"   id="2"> <br />
+c++ <input type="radio"  name="id"   value="3"  id="3"> <br />
+Dbms <input type="radio"  name="id"  value="4"  id="4"> <br />
+Html <input type="radio"  name="id"  value="5"  id="5"> <br />
 
 
 <input type="submit" value="select">

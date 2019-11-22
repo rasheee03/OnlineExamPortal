@@ -29,7 +29,7 @@ public class Question {
 		@JoinColumn(name="cid")
 		private Course courses;
 
-		@OneToMany(mappedBy = "questionBank", cascade = CascadeType.ALL)
+		@OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
 		private List<Option> options;
 		
 		@Column(name = "lvl")

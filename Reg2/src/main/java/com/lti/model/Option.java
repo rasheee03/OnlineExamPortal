@@ -20,7 +20,7 @@ public class Option {
 	
 	@ManyToOne
 	@JoinColumn(name="qid")
-	private Question questionBank;
+	private Question question;
 	
 	private char isCorrectAnswer;
 	
@@ -34,12 +34,12 @@ public class Option {
 		this.opid = opid;
 	}
 
-	public Question getQuestionBank() {
-		return questionBank;
+	public Question getQuestion() {
+		return question;
 	}
 
-	public void setQuestionBank(Question questionBank) {
-		this.questionBank = questionBank;
+	public void setQuestion(Question questionBank) {
+		this.question = questionBank;
 	}
 
 	public char getIsCorrectAnswer() {
