@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="AddQuestions.jsp">
+<form method="post" action="qp.lti">
 Select course <br/>
 
-java  <input type="radio"  name="cName"  value="java"  id="1"><br />
-c++ <input type="radio"  name="cName"   value="c++"  id="2"> <br />
-python <input type="radio"  name="cName" value="python"   id="3"> <br />
-Dbms <input type="radio"  name="cName"  value="Dbms"  id="4"> <br />
+java  <input type="radio"  name="id"  value="java"  id="1"><br />
+python <input type="radio"  name="id" value="python"   id="2"> <br />
+c++ <input type="radio"  name="id"   value="c++"  id="3"> <br />
+Dbms <input type="radio"  name="id"  value="Dbms"  id="4"> <br />
+Html <input type="radio"  name="id"  value="Html"  id="5"> <br />
+
 
 <input type="submit" value="select">
 </form>
