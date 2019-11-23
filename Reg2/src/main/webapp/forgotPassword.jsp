@@ -12,11 +12,10 @@
 
 		<h1>Forgot Password</h1>
 
-
 		<div class="info">
 			<p>Please enter your email address below and we will send you
 				information to change your password.</p>
-			<form action="generatePass.lti" method="post">
+			<form action="sendMail.lti" method="post">
 				<label>Email Address</label><br> <br> <input name="email"
 					type="text"><br> <br>
 				

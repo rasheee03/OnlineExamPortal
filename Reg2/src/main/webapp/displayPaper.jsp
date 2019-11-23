@@ -22,9 +22,15 @@
 <div style="border:solid 2px black;display:inline-block;"></div>
 <table align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
 	<c:forEach items="${questions}" var="q">
+		<c:forEach items="${options}" var="o">
+	
 		<tr>
 			<td>${q.getQuestion()}</td>
 		</tr>
+		<tr>
+		<td>${o.getDescription()}</td>
+		</tr>
+	</c:forEach>
 	</c:forEach>
 </table>
 </body>

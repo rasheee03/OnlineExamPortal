@@ -1,15 +1,17 @@
 package com.lti.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
-import org.jboss.logging.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lti.model.Option;
 import com.lti.model.Question;
 
 @Repository
@@ -27,8 +29,7 @@ public class QuestionPaperRepository {
 //	
 //	}
 //	
-	
-	 @Transactional
+	@Transactional
 	  public List<Question> fetchQuestions(int c)
 	  {
 		  String selectQuery ="Select q1 from Question q1 where q1.courses.cid=:c1";
@@ -37,21 +38,42 @@ public class QuestionPaperRepository {
 		  List<Question> ques = q.getResultList();
 		  return ques;
 	  }
+	
+	
+//	=================================================================================
 	 
 	 @Transactional
-	  public List<Question> fetchOneQuestion(int c)
-	  {
-		 @Query(value="Select question from Question q1 where q1.courses.cid=:c1 ORDER BY random()", nativeQuery=true)
-		  Query q = entityManager.createQuery(selectQuery);
-		  q.setParameter("c1", c);
-		  q.setMaxResults(1);
-		  List<Question> ques = q.getResultList();
+	 public List<Option> fetchOneQuestion(int c2)
+	  {		
+		 String q="select q,o from Question q inner join Option o on q.qid=o.qid where q.courses.cid in "
+	  		+ " (select c from Course c where cid=:c1)";
+	  		entityManager.createQuery(q);
+	  		q.setParameter("c1",c2);
+	  			List<Question> ques = q.getResultList();
+			 
+	  
+	   	return op;
+ }
 		 
-		  return ques;
-	  }
+		
+		 
+	  
 	 
-	 @Query(value="select first_name, last_name from Users u where u.user_id =:userId", nativeQuery=true)
-	 List<Object[]> getUserFullNameById(@Param("userId") String userId);
+	 
+//	 @Transactional
+//	  public List<Question> fetchOneQuestion(int c)
+//	  {
+//		 @Query(value="Select question from Question q1 where q1.courses.cid=:c1 ORDER BY random()", nativeQuery=true)
+//		  Query q = entityManager.createQuery(selectQuery);
+//		  q.setParameter("c1", c);
+//		  q.setMaxResults(1);
+//		  List<Question> ques = q.getResultList();
+//		 
+//		  return ques;
+//	  }
+//	 
+//	 @Query(value="select first_name, last_name from Users u where u.user_id =:userId", nativeQuery=true)
+//	 List<Object[]> getUserFullNameById(@Param("userId") String userId);
 
 	 
 //	 public List<Option> fetchOptions(int q)
