@@ -18,7 +18,7 @@ public class QuestionService {
 	@Autowired
 	private QuestionRepository questRepo;
 	
-	@Transactional
+
 		public void addQuest(String q,String op1,String op2,String op3,String op4,String lvl,String c,String a)
 		{
 		
@@ -30,6 +30,7 @@ public class QuestionService {
 		c1.setCid(Integer.parseInt(c));
 		
 		Option op=new Option();
+		
 		Question q1 = new Question();
 		
 		List<Option> o=new ArrayList<Option>();
@@ -51,6 +52,7 @@ public class QuestionService {
 		
 	
 		questRepo.add(q1);
+		
 		}
 		
 		

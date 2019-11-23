@@ -18,19 +18,26 @@
 </head>
 <body>
 
+
+
 <h1 align="center" style="color:Blue"><font><strong>Questions</strong></font></h1>
 <div style="border:solid 2px black;display:inline-block;"></div>
 <table align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
-	<c:forEach items="${questions}" var="q">
-		<c:forEach items="${options}" var="o">
+	
+	
+		<c:forEach items="${questions}" var="q">
 	
 		<tr>
-			<td>${q.getQuestion()}</td>
+		<td colspan="4">${q.getQuestion()}</td>
 		</tr>
+		
+		<c:forEach items="${q.options}" var="o">
 		<tr>
 		<td>${o.getDescription()}</td>
 		</tr>
-	</c:forEach>
+		</c:forEach>
+ 
+	
 	</c:forEach>
 </table>
 </body>

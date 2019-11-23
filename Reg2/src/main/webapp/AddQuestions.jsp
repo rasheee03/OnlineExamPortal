@@ -8,33 +8,42 @@
 <script type="text/javascript">
 	function fun(){
 		if(document.getElementById("chkOp1").checked==true){
-			document.getElementById("chkOp1").value="Y";
-			document.getElementById("opt").value=document.getElementById("lbl1").value="Y";
+			document.getElementById("chkOp1").value;
+			document.getElementById("opt").value=document.getElementById("lbl1").value;
 		}
 		if(document.getElementById("chkOp1").checked==false){
-			document.getElementById("chkOp1").value="N";
+			document.getElementById("chkOp1").value;
+		//	document.getElementById("opt").value=null;
+
 		}
 		
 		if(document.getElementById("chkOp2").checked==true){
-			document.getElementById("chkOp2").value="Y";
-			//document.getElementById("opt").value=document.getElementById("lbl2").value;
+			document.getElementById("chkOp2").value;
+			document.getElementById("opt").value=document.getElementById("lbl2").value;
 		}
 		if(document.getElementById("chkOp2").checked==false){
-			document.getElementById("chkOp2").value="N";
+			document.getElementById("chkOp2").value;
+		//	document.getElementById("opt").value=null;
+
 		}
 		if(document.getElementById("chkOp3").checked==true){
-			document.getElementById("chkOp3").value="Y";
-			//document.getElementById("opt").value=document.getElementById("lbl3").value;
+			document.getElementById("chkOp3").value;
+			document.getElementById("opt").value=document.getElementById("lbl3").value;
 		}
 		if(document.getElementById("chkOp3").checked==false){
-			document.getElementById("chkOp3").value="N";
+			document.getElementById("chkOp3").value;
+
+		//	document.getElementById("opt").value=null;
+
+			
 		}
 		if(document.getElementById("chkOp4").checked==true){
-			document.getElementById("chkOp4").value="Y";
-			//document.getElementById("opt").value=document.getElementById("lbl4").value;
+			document.getElementById("chkOp4").value;
+			document.getElementById("opt").value=document.getElementById("lbl4").value;
 		}
 		if(document.getElementById("chkOp4").checked==false){
-			document.getElementById("chkOp4").value="N";
+			document.getElementById("chkOp4").value;
+
 		}
 		
 	

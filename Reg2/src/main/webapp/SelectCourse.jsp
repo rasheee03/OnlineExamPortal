@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="eh.lti">
+<form method="post" action="qp.lti">
 Select course <br/>
 
 java  <input type="radio"  name="id"  value="1"  id="1"><br />
