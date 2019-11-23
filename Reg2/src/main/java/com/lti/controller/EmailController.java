@@ -31,12 +31,12 @@ public class EmailController {
 		if(b)
 		   {
 			
-			emService.send(em, "testing-subject", uuid);
+			emService.send(em, "Your temporary password", uuid);
 		  }
 		   
 		   else
 		   {
-			   return "invalid email id";
+			   System.out.println("invalid");
 		   }
 		return "login.jsp";
 		 

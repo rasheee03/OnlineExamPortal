@@ -22,7 +22,7 @@ public class Option {
 	@JoinColumn(name="qid")
 	private Question question;
 	
-	private char isCorrectAnswer;
+	private String isCorrectAnswer;
 	
 	private String description;
 
@@ -42,11 +42,12 @@ public class Option {
 		this.question = questionBank;
 	}
 
-	public char getIsCorrectAnswer() {
+	
+	public String getIsCorrectAnswer() {
 		return isCorrectAnswer;
 	}
 
-	public void setIsCorrectAnswer(char isCorrectAnswer) {
+	public void setIsCorrectAnswer(String isCorrectAnswer) {
 		this.isCorrectAnswer = isCorrectAnswer;
 	}
 

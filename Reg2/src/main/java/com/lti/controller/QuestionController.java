@@ -23,8 +23,8 @@ public class QuestionController {
 	 
 	 @RequestMapping(path = "question.lti", method = RequestMethod.POST)
 	 private String addQuestions(@RequestParam("question")String q,
-			 @RequestParam("options[0].description") String op1,@RequestParam("options[1].description") String op2,
-			 @RequestParam("options[2].description") String op3,@RequestParam("options[3].description") String op4,@RequestParam("level")int lvl ,@RequestParam("id")Course c ,@RequestParam("isCorrectAnswer")char a)
+			 @RequestParam("chkOp1") String op1,@RequestParam("chkOp2") String op2,
+			 @RequestParam("chkOp3") String op3,@RequestParam("chkOp4") String op4,@RequestParam("level") String lvl ,@RequestParam("courses_id") String c ,@RequestParam("correct_ans")String a)
 	 {	 
    	 queService.addQuest(q,op1,op2,op3,op4,lvl,c,a);
 //		 queService.addOptions(op);

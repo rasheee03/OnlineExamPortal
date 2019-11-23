@@ -23,6 +23,8 @@ public class Login {
 	
 	private String password;
 	
+
+	
 	@OneToOne
 	@JoinColumn(name="rid")
 	private Registration registration;
@@ -58,6 +60,6 @@ public class Login {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	
 }

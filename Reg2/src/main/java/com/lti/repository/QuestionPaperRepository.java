@@ -42,21 +42,21 @@ public class QuestionPaperRepository {
 	
 //	=================================================================================
 	 
-	 @Transactional
-	 public List<Option> fetchOneQuestion(int c2)
-	  {		
-		 String q="select q,o from Question q inner join Option o on q.qid=o.qid where q.courses.cid in "
-	  		+ " (select c from Course c where cid=:c1)";
-	  		entityManager.createQuery(q);
-	  		q.setParameter("c1",c2);
-	  			List<Question> ques = q.getResultList();
-			 
-	  
-	   	return op;
- }
-		 
-		
-		 
+//	 @Transactional
+//	 public List<Option> fetchOneQuestion(int c2)
+//	  {		
+//		 String q="select q,o from Question q inner join Option o on q.qid=o.qid where q.courses.cid in "
+//	  		+ " (select c from Course c where cid=:c1)";
+//	  		entityManager.createQuery(q);
+//	  		q.setParameter("c1",c2);
+//	  			List<Question> ques = q.getResultList();
+//			 
+//	  
+//	   	return op;
+// }
+//		 
+//		
+//		 
 	  
 	 
 	 

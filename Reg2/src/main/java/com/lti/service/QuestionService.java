@@ -19,39 +19,38 @@ public class QuestionService {
 	private QuestionRepository questRepo;
 	
 	@Transactional
-		public void addQuest(String q1,String op,int lvl,Course c1,char a)
+		public void addQuest(String q,String op1,String op2,String op3,String op4,String lvl,String c,String a)
 		{
 		
-		//Course c = questRepo.fetchCourse(q.getCourses().getCid());		
-		Question q = new Question();
-		q.setCourses(c1);
-		q.setQuestion(q1);
-		q.setLevel(lvl);
+			//create Course object
+			//create Option object
+			// create Question
 		
-		Option o1 = new Option();
+		Course c1=new Course();
+		c1.setCid(Integer.parseInt(c));
+		
+		Option op=new Option();
+		Question q1 = new Question();
+		
 		List<Option> o=new ArrayList<Option>();
+		op.setDescription(op1);
+		op.setDescription(op2);
+		op.setDescription(op3);
+		op.setDescription(op4);
+		op.setIsCorrectAnswer(a);
+		op.setQuestion(q1);
+		o.add(op);
 		
-		for(Option i: o )
-		{
-			i.setDescription(op);
-			i.setQuestionBank(q);
-			i.setIsCorrectAnswer(a);
-
-		}
-		o.add(o1);
-		q.setOptions(o);
+		
+		
+		q1.setCourses(c1);
+		q1.setLevel(Integer.parseInt(lvl));
+		q1.setQuestion(q);
+		q1.setOptions(o);
+		
+		
 	
-
-		questRepo.add(q);
-		
-		
-//			Course c = questRepo.fetchCourse(qb.getCourses().getCid());
-//			qb.setCourses(c);
-//			
-//			for(Option op : qb.getOptions())
-//				op.setQuestionBank(qb);
-//			
-//			questRepo.add(qb);
+		questRepo.add(q1);
 		}
 		
 		
