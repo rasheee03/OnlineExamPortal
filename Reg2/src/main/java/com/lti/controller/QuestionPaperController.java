@@ -20,14 +20,13 @@ public class QuestionPaperController {
 	@Autowired
 	private QuestionPaperService quesPaperService;
 	
-	@Autowired
-	private QuestionPaperRepository quesRepo;
+
 	
 
 	 @RequestMapping(path = "qp.lti", method = RequestMethod.POST)
 	 public String questionPaper(@RequestParam("id") String id,Map m)
 	 {
-		List<Question> q1=quesRepo.fetchQuestions(Integer.parseInt(id)); 
+		List<Question> q1=quesPaperService.fetchQuestions(Integer.parseInt(id)); 
 	
 		m.put("questions", q1);
 	    return "displayPaper.jsp";

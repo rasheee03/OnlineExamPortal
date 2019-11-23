@@ -27,9 +27,9 @@ public class QuestionController {
 			 @RequestParam("chkOp3") String op3,@RequestParam("chkOp4") String op4,@RequestParam("level") String lvl ,
 			 @RequestParam("courses_id") String c ,@RequestParam("correct_ans")String a)
 	 {	 
+		 
    	 queService.addQuest(q,op1,op2,op3,op4,lvl,c,a);
-//		 queService.addOptions(op);
-//		 queService.addCourse(c);
+
 		 
 		 return "AddQuestions.jsp";
 	 }

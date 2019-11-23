@@ -28,7 +28,9 @@
 		<c:forEach items="${questions}" var="q">
 	
 		<tr>
-		<td colspan="4">${q.getQuestion()}</td>
+		
+		<td >${q.getQuestion()}</td>
+		
 		</tr>
 		
 		<c:forEach items="${q.options}" var="o">

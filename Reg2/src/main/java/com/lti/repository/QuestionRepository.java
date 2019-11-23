@@ -21,8 +21,6 @@ public class QuestionRepository {
 		entityManager.persist(qb);
 	}
 	
-	public Course fetchCourse(int courseId) {
-		return entityManager.find(Course.class, courseId);
-	}
+
 
 }

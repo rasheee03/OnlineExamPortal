@@ -13,18 +13,8 @@ public class QuestionPaperService {
 
 	@Autowired
 	private QuestionPaperRepository quesPaperRepo; 
-	
-//	public List<Question> fetchPaper(int c){
-//		List<Question> q1 = quesPaperRepo.fetchQuestions(c);
-//		return q1;
-		
-//		for(Question q : q1)
-//		{
-//			q.getCourses();
-//			q.getLevel();
-//			q.getOptions();
-//			q.getQuestion();
-//		}
-		 
-	//}
+
+	public List<Question> fetchQuestions(int c){
+		return quesPaperRepo.fetchQuestions(c);
+	}
 }
