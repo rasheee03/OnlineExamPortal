@@ -5,20 +5,22 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.model.Course;
 import com.lti.model.Option;
 import com.lti.model.Question;
+import com.lti.repository.OptionRepository;
 import com.lti.repository.QuestionRepository;
 
 @Service
 public class QuestionService {
 
 	@Autowired
-	private QuestionRepository questRepo;
+	private QuestionRepository quesRepo;
 	
-
+	@Autowired
+	private OptionRepository optionRepo;
+	
 		public void addQuest(String q,String op1,String op2,String op3,String op4,String lvl,String c,String a)
 		{
 		
@@ -51,9 +53,10 @@ public class QuestionService {
 		
 		
 	
-		questRepo.add(q1);
+		quesRepo.add(q1);
 		
 		}
-		
-		
 }
+		
+		
+

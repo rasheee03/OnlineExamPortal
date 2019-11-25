@@ -16,7 +16,7 @@ import com.lti.service.ExamHistoryService;
 public class ExamHistoryController {
 	
 	@Autowired 
-	ExamHistoryService ehService;
+	private ExamHistoryService ehService;
 	
 
 	 @RequestMapping(path = "eh.lti", method = RequestMethod.POST)

@@ -1,18 +1,16 @@
 package com.lti.repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.model.Option;
 import com.lti.model.Question;
+import com.lti.model.QuestionPaper;
 
 @Repository
 public class QuestionPaperRepository {
@@ -30,6 +28,7 @@ public class QuestionPaperRepository {
 		  List<Question> ques = q.getResultList();
 		  return ques;
 	  }
+	
 	
 	
 

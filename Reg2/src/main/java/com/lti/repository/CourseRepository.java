@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.lti.model.Course;
 
 @Repository
-public class CourseRepository {
+public class CourseRepository{
 	
 	
 	@PersistenceContext

@@ -27,15 +27,15 @@ import javax.persistence.Table;
 		private String name;
 		private String email;
 		private String password;
+		private String confirmPassword;
 		private long mobile;
 		private String qualification;
 		private String yearOfCompletion;
 		private String dateOfBirth;
-		
 		private String city;
 		private String state;
-		private String captcha;
-		private String role;
+		
+		
 		
 	
 		@OneToOne( mappedBy="registration", cascade=CascadeType.ALL)
@@ -108,19 +108,17 @@ import javax.persistence.Table;
 		public void setState(String state) {
 			this.state = state;
 		}
+		public String getConfirmPassword() {
+			return confirmPassword;
+		}
+		public void setConfirmPassword(String confirmPassword) {
+			this.confirmPassword = confirmPassword;
+		}
+		public String getDateOfBirth() {
+			return dateOfBirth;
+		}
 	
-		public String getCaptcha() {
-			return captcha;
-		}
-		public void setCaptcha(String captcha) {
-			this.captcha = captcha;
-		}
-		public String getRole() {
-			return role;
-		}
-		public void setRole(String role) {
-			this.role = role;
-		}
+		
 		
 		
 		

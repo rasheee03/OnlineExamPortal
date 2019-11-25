@@ -19,11 +19,11 @@ public class RegistrationController {
 	@Autowired
 	private RegistrationService regService;
 
-	@Autowired 
-	private QuestionService queService;
-	
-	@Autowired
-	private CourseService courseService;
+//	@Autowired 
+//	private QuestionService queService;
+//	
+//	@Autowired
+//	private CourseService courseService;
 	
 	
 	 @RequestMapping(path="register.lti", method=RequestMethod.POST)

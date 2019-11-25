@@ -5,20 +5,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lti.model.ExamHistory;
+import com.lti.model.Question;
 import com.lti.repository.ExamHistoryRepository;
+import com.lti.repository.QuestionPaperRepository;
 
 @Service
-public class ExamHistoryService {
+public class ExamService {
+
 	
-	@Autowired 
+	@Autowired
 	private ExamHistoryRepository ehRepo;
 	
+	@Autowired
+	private QuestionPaperRepository qpRepo;
 	
-	public List<ExamHistory> getDetails(int c1)
-	{
-		List<ExamHistory> eh = ehRepo.get(c1);
-		return eh;
-	}
 
+	
 }

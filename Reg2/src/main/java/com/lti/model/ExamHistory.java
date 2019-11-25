@@ -1,6 +1,7 @@
 package com.lti.model;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -26,7 +28,7 @@ public class ExamHistory {
 		@JoinColumn(name = "lid", nullable = false)
 		private Login login;
 		
-		private LocalDateTime examDate;
+		private Date examDate;
 		private int result;
 		
 		@OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -49,11 +51,11 @@ public class ExamHistory {
 			this.login = login;
 		}
 
-		public LocalDateTime getExamDate() {
+		public Date getExamDate() {
 			return examDate;
 		}
 
-		public void setExamDate(LocalDateTime examDate) {
+		public void setExamDate(Date examDate) {
 			this.examDate = examDate;
 		}
 

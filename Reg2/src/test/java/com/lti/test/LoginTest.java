@@ -32,8 +32,8 @@ public class LoginTest {
 		r.setDateOfBirth(LocalDate.of(2015, 11, 15).format(formatter));
 		r.setCity("kalyan");
 		r.setState("maharastra");
-		r.setCaptcha("jsgd");
-		r.setRole("ROLE_USER");
+//		r.setCaptcha("jsgd");
+//		r.setRole("ROLE_USER");
 		
 		l.setEmail(r.getEmail());
 		l.setPassword(r.getPassword());

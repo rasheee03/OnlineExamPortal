@@ -1,17 +1,14 @@
 package com.lti.repository;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.lti.model.Login;
 
 @Repository
-public class LoginRepository {
+public class LoginRepository{
 	
 	@PersistenceContext
 	private EntityManager entityManager;

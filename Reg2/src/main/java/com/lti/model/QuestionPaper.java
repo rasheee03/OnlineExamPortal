@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -20,10 +21,33 @@ public class QuestionPaper {
 	
 	private int qpid;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="qid")
 	private Question question;
 	
+	@OneToOne
+	@JoinColumn(name="examid")
+	private ExamHistory examHistory;
+	
+	private Integer answer;
+	
+	
+	public ExamHistory getExamHistory() {
+		return examHistory;
+	}
+
+	public void setExamHistory(ExamHistory examHistory) {
+		this.examHistory = examHistory;
+	}
+
+	public Integer getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(Integer answer) {
+		this.answer = answer;
+	}
+
 	public int getQpid() {
 		return qpid;
 	}
