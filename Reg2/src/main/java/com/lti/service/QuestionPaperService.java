@@ -23,17 +23,6 @@ public class QuestionPaperService {
 	@Autowired
 	private QuestionPaperRepository quesPaperRepo; 
 	
-	@Autowired
-	private LoginRepository loginRepo;
-	
-	@Autowired
-	private CourseRepository courseRepo;
-	
-	@Autowired
-	private ExamHistoryRepository ehRepo;
-	
-	@Autowired
-	private QuestionRepository quesRepo; 
 
 	
 	@Transactional

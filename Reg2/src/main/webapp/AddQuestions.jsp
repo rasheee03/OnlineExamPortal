@@ -8,7 +8,7 @@
 	function fun(){
 		if(document.getElementById("chkOp1").checked==true){
 			document.getElementById("chkOp1").value;
-			document.getElementById("opt").value=document.getElementById("lbl1").value;
+			document.getElementById("opt").value="1";
 		}
 		if(document.getElementById("chkOp1").checked==false){
 			document.getElementById("chkOp1").value;
@@ -18,7 +18,7 @@
 		
 		if(document.getElementById("chkOp2").checked==true){
 			document.getElementById("chkOp2").value;
-			document.getElementById("opt").value=document.getElementById("lbl2").value;
+			document.getElementById("opt").value="2";
 		}
 		if(document.getElementById("chkOp2").checked==false){
 			document.getElementById("chkOp2").value;
@@ -27,7 +27,7 @@
 		}
 		if(document.getElementById("chkOp3").checked==true){
 			document.getElementById("chkOp3").value;
-			document.getElementById("opt").value=document.getElementById("lbl3").value;
+			document.getElementById("opt").value="3";
 		}
 		if(document.getElementById("chkOp3").checked==false){
 			document.getElementById("chkOp3").value;
@@ -38,12 +38,13 @@
 		}
 		if(document.getElementById("chkOp4").checked==true){
 			document.getElementById("chkOp4").value;
-			document.getElementById("opt").value=document.getElementById("lbl4").value;
+			document.getElementById("opt").value="4";
 		}
 		if(document.getElementById("chkOp4").checked==false){
 			document.getElementById("chkOp4").value;
 
 		}
+	
 		
 	
 		
@@ -56,10 +57,10 @@
 Enter Question <input type="text" name="question" /> <br /> 
 
 Options:
-<input type="checkbox" id="chkOp1" name="chkOp1"  onclick="fun()"  for="options[0].description"> <input type="text" name = "options[0].description" id="lbl1"><br/> 
-<input type="checkbox" id="chkOp2" name="chkOp2"   onclick="fun()"  for="options[1].description"><input type="text" name = "options[1].description" id="lbl2"><br/>
-<input type="checkbox" id="chkOp3" name="chkOp3"   onclick="fun()"  for="options[2].description"><input type="text" name = "options[2].description" id="lbl3"><br/>
-<input type="checkbox" id="chkOp4" name="chkOp4"  onclick="fun()" for="options[3].description"><input type="text" name = "options[3].description" id="lbl4"><br/>
+<input type="radio" id="chkOp1" name="chkOp"  onclick="fun()"  for="options[0].description"> <input type="text" name = "options[0].description" id="lbl1"><br/> 
+<input type="radio" id="chkOp2" name="chkOp"   onclick="fun()"  for="options[1].description"><input type="text" name = "options[1].description" id="lbl2"><br/>
+<input type="radio" id="chkOp3" name="chkOp"   onclick="fun()"  for="options[2].description"><input type="text" name = "options[2].description" id="lbl3"><br/>
+<input type="radio" id="chkOp4" name="chkOp"  onclick="fun()" for="options[3].description"><input type="text" name = "options[3].description" id="lbl4"><br/>
 
 <input type="text" name="correct_ans" id="opt" value="res opt"/>
 
