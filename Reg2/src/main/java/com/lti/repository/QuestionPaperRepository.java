@@ -22,7 +22,7 @@ public class QuestionPaperRepository {
 	@Transactional
 	  public List<Question> fetchQuestions(int c)
 	  {
-		  String selectQuery ="Select q1 from Question q1 where q1.courses.cid=:c1";
+		  String selectQuery ="Select q1 from Question q1 where q1.courses.cid=:c1 order by q1.qid";
 		  Query q = entityManager.createQuery(selectQuery);
 		  q.setParameter("c1", c);
 		  List<Question> ques = q.getResultList();

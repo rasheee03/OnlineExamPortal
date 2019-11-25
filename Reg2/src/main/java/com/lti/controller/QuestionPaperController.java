@@ -32,9 +32,9 @@ public class QuestionPaperController {
 
 
 	 @RequestMapping(path = "qp.lti", method = RequestMethod.POST)
-	 public String questionPaper(@RequestParam("id") String id,Map m)
+	 public String questionPaper(/*@RequestParam("id") String id,*/Map m)
 	 {
-		List<Question> q1=quesPaperService.fetchQuestions(Integer.parseInt(id)); 
+		List<Question> q1=quesPaperService.fetchQuestions(Integer.parseInt("1")); 
 	
 		m.put("questions", q1);
 	    return "displayPaper.jsp";
