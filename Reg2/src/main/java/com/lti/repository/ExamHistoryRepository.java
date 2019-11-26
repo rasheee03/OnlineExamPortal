@@ -28,5 +28,11 @@ public class ExamHistoryRepository{
 		
 		
 	}
+	
+	
+	 public ExamHistory add(ExamHistory c) {
+	        entityManager.persist(c);
+	        return c;
+	    }
 
 }

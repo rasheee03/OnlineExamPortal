@@ -15,29 +15,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Question Paper</title>
+  
 </head>
 <body>
 
 
-<form method="post" action="qp.lti">
+<form method="post" action="qp1.lti">
 <h1 align="center" style="color:Blue"><font><strong>Questions</strong></font></h1>
 <div style="border:solid 2px black;display:inline-block;"></div>
-<table align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
-	
-	
-		<c:forEach items="${questions}" begin="0" end="0" var="q">
+
+ <table  align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
+		
+<h1>Q.no <%= request.getAttribute("index")%> </h1> 
+	 	
 		<tr>
-		<td >${q.getQuestion()}</td>
+		<td >${question.getQuestion()}</td>
 		</tr>
-		<c:forEach items="${q.options}" var="o">
+		<c:forEach items="${question.options}" var="o">
 		<tr>
 		<td><input type="radio" name="selected_ans">${o.getDescription()}</td>
 		</tr>
 		</c:forEach>
- 		</c:forEach>
  		
+<h1>Size <%= request.getAttribute("size")%> </h1> 
  		
-</table>
+</table> 
 <button type="submit">NEXT</button>
 </form>
 </body>

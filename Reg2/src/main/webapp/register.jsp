@@ -180,10 +180,10 @@ body{
 
 <div class="form-style-10">
 <h1>Register</h1>
-<form class="form-container">
+<form class="form-container" action="register.lti" method="post">
     <div class="section">Name</div>
     <div class="inner-wrap">
-       <input type="text" name="fullname" pattern="[A-Za-z]{2,15}" placeholder="Enter your name" required/>
+       <input type="text" name="name" pattern="[A-Za-z]{2,15}" placeholder="Enter your name" required/>
     </div>
     <div class="section">Email</div>
     <div class="inner-wrap">
@@ -195,19 +195,19 @@ body{
     </div>
     <div class="section">Confirm password</div>
     <div class="inner-wrap">
-        <input type="password" name="password1" id = "password1"  placeholder="Re-Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength = "8" maxlength = "15"  required/>
+        <input type="password" name="confirmPassword" id = "password1"  placeholder="Re-Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength = "8" maxlength = "15"  required/>
     </div>
     <div class="section">Mobile no.</div>
     <div class="inner-wrap">
-        <input type="number" name="number" pattern="[789][0-9]{9}" placeholder="Enter your mobile no" required/>
+        <input type="number" name="mobile" pattern="[789][0-9]{9}" placeholder="Enter your mobile no" required/>
     </div>
     <div class="section">DOB</div>
     <div class="inner-wrap">
-        <input type="date" name="dob" placeholder="DOB" required/>
+        <input type="date" name="dateOfBirth" placeholder="DOB" required/>
     </div>
     <div class="section">Qualification</div>
     <div class="inner-wrap">
-        <select>
+        <select name="qualification">
             <option>B.E</option>
             <option>B.Tech</option>
             <option>BCA</option>
@@ -216,7 +216,7 @@ body{
     </div>
     <div class="section">Year of passing</div>
     <div class="inner-wrap">
-        <input type="date" name="yop" placeholder="YOP" required/>
+        <input type="date" name="yearOfCompletion" placeholder="YOP" required/>
     </div>
     <div class="section">City</div>
     <div class="inner-wrap">

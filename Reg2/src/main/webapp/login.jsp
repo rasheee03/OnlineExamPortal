@@ -193,10 +193,10 @@ body{
 
 <div class="form-style-10">
 <h1>Login</h1>
-<form class="form-container" method = "post" action = "" onsubmit="return validation()">
+<form class="form-container" method = "post" action = "home.jsp" onsubmit="return validation()">
     <div class="section">Username</div>
     <div class="inner-wrap">
-       <input type="text" name="username" required/>
+       <input type="text" name="email" required/>
     </div>
     <div class="section">Password</div>
     <div class="inner-wrap">
@@ -205,7 +205,7 @@ body{
     <div class="links-container">
         <a href = "forgotpass.jsp">Lost your password?</a>
         <a href = "register.jsp" >Don't have a account?</a>
-        <a href = "home.jsp" >Home </a> <a href ="aboutus.jsp">About Us</a> <a href = "ContactUs.jsp">Contact Us</a>
+        <a href = "home.jsp" >Home </a> <a href ="aboutus.jsp">About Us</a> <a href = "contactus.jsp">Contact Us</a>
     </div>
      <input type = "submit" name = "submit" value = "Login" required><br>
 </form>
