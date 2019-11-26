@@ -28,7 +28,7 @@ public class EmailRepository {
 		if(l!=null)
 		{
 			l.setPassword(uuid);
-			entityManager.persist(l);
+			entityManager.merge(l);
 			return true;
 		}
 		else

@@ -31,7 +31,7 @@ public class EmailController {
 		if(b)
 		   {
 			
-			emService.send(em, "Your temporary password", uuid);
+			emService.send(em, " Password Reset ", "Your temporary password is" +uuid);
 		  }
 		   
 		   else

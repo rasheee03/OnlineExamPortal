@@ -200,10 +200,10 @@ body{
     </div>
     <div class="section">Password</div>
     <div class="inner-wrap">
-        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength = "8" maxlength = "15" required/>
+        <input type="password" name="password"  minlength = "8" maxlength = "100" required/>
     </div>
     <div class="links-container">
-        <a href = "forgotpass.jsp">Lost your password?</a>
+        <a href = "forgotPassword.jsp">Lost your password?</a>
         <a href = "register.jsp" >Don't have a account?</a>
         <a href = "home.jsp" >Home </a> <a href ="aboutus.jsp">About Us</a> <a href = "contactus.jsp">Contact Us</a>
     </div>

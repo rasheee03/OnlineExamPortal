@@ -20,6 +20,7 @@ import com.lti.service.QuestionPaperService;
 public class QuestionPaperController {
 
 	static int index=0;
+	static int qno=1;
 	List<Question> q1;
 	@Autowired
 	private QuestionPaperService quesPaperService;
@@ -41,14 +42,18 @@ public class QuestionPaperController {
 		//session.setAttribute("questions", q1);
 		//m.put("questions", q1);
 		model.addAttribute("index", index);
+		model.addAttribute("qno", qno);
 	    return "displayPaper.jsp";
+	    
 	 }
 	 @RequestMapping(path = "qp1.lti", method = RequestMethod.POST)
 	 public String questionPaper(Map m,ModelMap model)
 	 {
-		 int size=q1.size();
+		 int size=q1.size()-1;
 		//List<Question> q1=quesPaperService.fetchQuestions(Integer.parseInt(id));
 		m.put("question", q1.get(++index));
+		qno++;
+		model.addAttribute("qno",qno);
 		//session.setAttribute("questions", q1);
 		//m.put("questions", q1);
 		model.addAttribute("size", size);
