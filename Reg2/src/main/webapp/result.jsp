@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Form Style 10</title>
+    <title>Result</title>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <style type="text/css">
         body {
@@ -233,14 +233,10 @@ function closeNav() {
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
     
-    
-    <div class="form-style-10-1">
-    <h1>Exam history</h1>
-    </div>
-    
+  
     
     <div class="form-style-10">
-        <h1></h1>
+        <h1>RESULT</h1>
         <img path="logo-online-test.png"/>
 
         <form class="form-container">
@@ -264,31 +260,6 @@ function closeNav() {
 </form>
     </div>
     
-    
-    
-        <div class="form-style-10">
-        <h1></h1>
-        <img path="logo-online-test.png"/>
-
-        <form class="form-container">
-            <div class="label-container">
-                <span style="color: #000;">Course :</span>
-                <span>DBMS</span>
-            </div>
-           <div class="label-container">
-               <span style="color: #000;">Test Date :</span>
-               <span>10-09-2019</span>
-           </div>
-            <div class="label-container">
-                <span style="color: #000;">Score :</span>
-                <span>80</span>
-            </div>
-            <div class="label-container">
-                <span style="color: #000;">Remark :</span>
-                <span>PASS</span>
-            </div>
-        
-</form>
-    </div>
+   
 </body>
 </html>

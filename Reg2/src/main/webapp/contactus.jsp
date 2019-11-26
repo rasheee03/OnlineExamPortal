@@ -186,9 +186,9 @@ body{
                   <input type="submit" value="Submit"><br><br>
               
 
-                  <a href = "index.html">Home </a><br><br>
+                  <a href = "Landing_Page.jsp">Home </a><br><br>
 
-<a href = "Loginpage.jsp">Existing User?Login </a><br><br>
+<a href = "Login.jsp">Existing User?Login </a><br><br>
 
                 </form>
               </div>
@@ -199,4 +199,4 @@ body{
 </div>
 </body>
 </head>
-</html> </html>
+</html> 

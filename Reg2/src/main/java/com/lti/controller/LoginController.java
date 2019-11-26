@@ -5,11 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lti.service.LoginService;
 
 
 @Controller
+
 public class LoginController {
 	
 	
@@ -23,7 +25,7 @@ public class LoginController {
 	 {
 	   boolean b= logService.loginCheck(em, pw);
 	   if(b)
-	   {
+	   {  
 	    return "home.jsp";
 	  }
 	   

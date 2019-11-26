@@ -29,23 +29,14 @@ public class QuestionPaperRepository {
 		  return ques;
 	  }
 	
-	
-//      
-//          public List<Question> fetchQuestionsByExam(int c)
-//	  {              
-//		  String selectQuery ="Select q1.question from QuestionPaper q1 where q1.examHistory.eid=:c order by q1.question.qid";
-//		  Query q = entityManager.createQuery(selectQuery);
-//		  q.setParameter("c", c);
-//		  List<Question> ques = q.getResultList();
-//		  return ques;
-//	  }
-	
-	
-	  public void save(String ans){
-		  QuestionPaper qp=new QuestionPaper();
-		  qp.setAnswer(ans);
-          entityManager.persist(qp);
-      }
+//	
+//	  public void save(int ans){
+//		  QuestionPaper qp=new QuestionPaper();
+//		  Question q=new Question();
+//		  qp.setQuestion(q);
+//		  qp.setAnswer(ans);
+//          entityManager.persist(qp);
+//      }
 	
 	
 

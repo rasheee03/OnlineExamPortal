@@ -14,28 +14,36 @@ import com.lti.service.LevelService;
 
 @Controller
 public class LevelController {
-
+int sum=0;
+	
 	@Autowired
 	private LevelService levelService;
 	
-	@RequestMapping(path="level1.lti", method=RequestMethod.POST)
-	public String level(@RequestParam("id") String qid, @RequestParam("id1") String userop)
+	@RequestMapping(path="level.lti", method=RequestMethod.POST)
+	public String level(@RequestParam("q1") String qid, @RequestParam("op1") String opid)
 	{	
-		List<Option> op1 = levelService.fetchOptionsForGivenQu(Integer.parseInt(qid),Integer.parseInt(userop));
 		
-		
-		int counter;
-		for(Option o :op1)
-		{
-			int a = o.getOpid();
-			if(Integer.parseInt(userop) == a)
+			List<Option> options = levelService.fetchOptionsForGivenQu(Integer.parseInt(qid));
+			
+			
+			
+			int counter=0;
+			for(Option o :options)
 			{
-				counter=+1;
+				int a = o.getOpid();
+				if(Integer.parseInt(opid) == a)
+				{
+					counter=+2;
+				}
+				
 			}
-		}
-		
-		return "displayPaper.jsp";
-		
-		
+			sum=sum+counter;
+			
+			if(sum<6)
+			{
+			return "displayPaper.jsp";
+			}
+			else
+			return "scoreCard.jsp";
 	}
 }

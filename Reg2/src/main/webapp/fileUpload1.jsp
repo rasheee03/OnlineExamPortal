@@ -1,29 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE HTML>
+    <%@ page isELIgnored ="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript">
-function validate(){
-	var pass = document.getElementById("password").value;
-	var pass1 = document.getElementById("password1").value;
-	if(pass1===pass){
-		form.submit();
-	}
-	else
-		{
-		alert("Password does not match");
-		}
-}
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<script type ="text/javascript">
 </script>
 
-<title>Registration</title>
 
-
+<title>Form Style 10</title>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
-
 
 body{
 	background:#AEE4FF;
@@ -41,6 +31,7 @@ body{
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
 .form-style-10 .form-container .links-container a {
+    display: block;
     margin-bottom: 10px;
     color: #2A88AD;
     font-size: 18px;
@@ -175,65 +166,18 @@ body{
 }
 </style>
 </head>
-
 <body>
 
+
 <div class="form-style-10">
-<h1>Register</h1>
-<form class="form-container" action="register.lti" method="post">
-    <div class="section">Name</div>
-    <div class="inner-wrap">
-       <input type="text" name="name" pattern="[A-Z a-z]{2,25}" placeholder="Enter your name" required/>
-    </div>
-    <div class="section">Email</div>
-    <div class="inner-wrap">
-        <input type="email" name="email" placeholder="Enter your email" required/>
-    </div>
-    <div class="section">Password</div>
-    <div class="inner-wrap">
-        <input type="password" name="password" id = "password" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength = "8" maxlength = "15" required/>
-    </div>
-    <div class="section">Confirm password</div>
-    <div class="inner-wrap">
-        <input type="password" name="confirmPassword" id = "password1"  placeholder="Re-Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength = "8" maxlength = "15"  required/>
-    </div>
-    <div class="section">Mobile no.</div>
-    <div class="inner-wrap">
-        <input type="number" name="mobile" pattern="[789][0-9]{9}" placeholder="Enter your mobile no" minlength="10" maxlength="10" required/>
-    </div>
-    <div class="section">DOB</div>
-    <div class="inner-wrap">
-        <input type="date" name="dateOfBirth" placeholder="DOB" required/>
-    </div>
-    <div class="section">Qualification</div>
-    <div class="inner-wrap">
-        <select name="qualification">
-            <option>B.E</option>
-            <option>B.Tech</option>
-            <option>BCA</option>
-            <option>MCA</option>
-        </select>
-    </div>
-    <div class="section">Year of passing</div>
-    <div class="inner-wrap">
-        <input type="date" name="yearOfCompletion" placeholder="YOP" required/>
-    </div>
-    <div class="section">City</div>
-    <div class="inner-wrap">
-        <input type="text" name="city" placeholder="Enter city" required />
-    </div>
-    <div class="section">State</div>
-    <div class="inner-wrap">
-        <input type="text" name="state" placeholder="Enter state" required/>
-    </div>
-    <div class="button-section">
-        <div class="btn-div"> <input type="submit" name="Register"  onclick="validate()"  /></div>
-    </div>
-    <div class="links-container">
-        <a href = "login.jsp">Login?</a> | <a href = "aboutus.jsp">About Us</a>
-    </div>
-</form>
+<h3>File Upload:</h3>
+      Select a file to upload: <br />
+      <form action = "UploadServlet" method = "post"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" size = "50" />
+         <br />
+         <input type = "submit" value = "Upload File" />
+      </form>
 </div>
 </body>
 </html>
-    

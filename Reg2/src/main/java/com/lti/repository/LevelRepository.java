@@ -18,14 +18,14 @@ public class LevelRepository {
 	private  EntityManager entityManager;
 	
 	@Transactional
-	public List<Option> fetchOptionsForGivenQu(int qid, int userop)
+	public List<Option> fetchOptionsForGivenQu(int qid)
 	{
 		String selectQuery = "select op from Option op where qid=:q1";
 		Query q= entityManager.createQuery(selectQuery);
 		q.setParameter("q1", qid);
-		q.setParameter("op1", userop);
-		List<Option> ops=q.getResultList();
-		return ops;
+
+		List<Option> options=q.getResultList();
+		return options;
 		
 	
 		}

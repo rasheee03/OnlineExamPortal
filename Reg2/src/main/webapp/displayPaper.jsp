@@ -19,21 +19,21 @@
 
  <table  align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
 		
-<h1>Q.no <%= request.getAttribute("qno")%> </h1> 
+<h1>Q.no ${ sessionScope.qno + 1 } </h1> 
 	 	
 		<tr>
 		<td >${question.getQuestion()}</td>
 		</tr>
 		<c:forEach items="${question.options}" var="o">
 		<tr>
-		<td><input type="radio" name="selected_ans" >${o.getDescription()}</td>
+		<td><input type="radio" name="selected_ans" value="${ op.opid }">${o.getDescription()}</td>
 		</tr>
 		</c:forEach>
 		
-		<%if (request.getAttribute("index")==request.getAttribute("size"))
+		<%if (request.getAttribute("qno").equals(request.getAttribute("size")))
 		{%>
 
-<button type="button"><a href="exam_history.jsp">SUBMIT</a></button>
+<button type="submit"><a href="result.jsp">SUBMIT</a>
 <%}
 
 

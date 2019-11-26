@@ -31,9 +31,19 @@ public class QuestionPaperService {
 		return quesPaperRepo.fetchQuestions(c);
 	}
 	
+//	
+//	public void saveAns(int ans)
+//	{
+//		quesPaperRepo.save(ans);
+//	}
 	
-	public void save(String ans)
-	{
-		quesPaperRepo.save(ans);
-	}
+	
+//	public void checkAns(int ans)
+//	{
+//	
+//		if(ans==q.getOptions())
+//		{
+//			
+//		}
+//	}
 }

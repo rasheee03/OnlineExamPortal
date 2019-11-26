@@ -1,23 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-<script type ="text/javascript">
-</script>
-
-<title>Select course</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Form Style 10</title>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-<style type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="reset.css">
 
+	<link rel="stylesheet" href="sidenav.css">
+	<link rel="stylesheet" href="style3.css">
+<style type="text/css">
 body{
 	background:#AEE4FF;
 }
 .form-style-10{
-	max-width:450px;
-	padding:30px;
+	padding:80px;
 	margin:40px auto;
 	background: #FFF;
 	border-radius: 10px;
@@ -27,13 +27,6 @@ body{
 	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
-.form-style-10 .form-container .links-container a {
-    display: block;
-    margin-bottom: 10px;
-    color: #2A88AD;
-    font-size: 18px;
-}
-
 
 .form-style-10 .inner-wrap{
 	padding: 30px;
@@ -41,52 +34,30 @@ body{
 	border-radius: 6px;
 	margin-bottom: 15px;
 }
-
-.form-style-10 .inner-wrap svg {
-	width: 20px;
-	float: right;
-	top: 8px;
-    position: absolute;
-    right: 10px;
-	cursor: pointer;
-}
-
-
-.form-style-10 .form-container .button-section .btn-div {
-	margin: auto;
-	width: 100px;
-}
-
 .form-style-10 .form-container {
-
+    display: inline-block;
+    width: 100%;
+}
+.form-style-10 .form-container .option {
+    display: inline-block;
+    border: 2px solid #3d9ae2;
+    height: 200px;
+    width: 47%;
+    text-align: center;
 }
 
-.form-style-10 h1{
-	background: #2A88AD;
-	padding: 20px 30px 15px 30px;
-	margin: -30px -30px 30px -30px;
-	border-radius: 10px 10px 0 0;
-	-webkit-border-radius: 10px 10px 0 0;
-	-moz-border-radius: 10px 10px 0 0;
-	color: #fff;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-	font: normal 30px 'Bitter', serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #257C9E;
+.form-style-10 .form-container .option-div {
+    padding: 40px;
+    font-size: 18px;
+    color: #3d9ae2;
+    cursor: pointer;
 }
 .form-style-10 h1 > span{
 	display: block;
 	margin-top: 2px;
 	font: 13px Arial, Helvetica, sans-serif;
 }
-.form-style-10 label{
-	display: block;
-	font: 13px Arial, Helvetica, sans-serif;
-	color: #888;
-	margin-bottom: 15px;
-}
+
 .form-style-10 input[type="text"],
 .form-style-10 input[type="date"],
 .form-style-10 input[type="datetime"],
@@ -161,22 +132,55 @@ body{
 	position: absolute;
 	width: 40%;
 }
+
+
+    a { color: #aeecff; } /* CSS link color */
+
 </style>
 </head>
+
 <body>
-<div class="form-style-10">
-<form method="post" action="qp.lti">
-<b>Select Course</b> <br/><br/>
 
-<input type="radio"  name="id"  value="1"  id="1">JAVA<br />
-<input type="radio"  name="id" value="2"   id="2">PYTHON <br />
-<input type="radio"  name="id"   value="3"  id="3">C++ <br />
-<input type="radio"  name="id"  value="4"  id="4">DBMS <br />
-<input type="radio"  name="id"  value="5"  id="5">HTML <br />
+<!-- Navbar -->
+	<div id="main">
+
+      
+		<!-- TOPNAV -->
+		<div class="icon-bar">
+                
+      <span><a href="Landing_Page.jsp" style="color: aliceblue;">
+        <img src = "bkc.png"  height="60" width="65"  ></a></span>
+        <center><h1>Online Examination System</h1></center>
+        <div class="signin">
+        
+            <span style="float: right;"><a href="registration.html" style="color: rgb(37, 24, 214);">Sign Up</a></span>
+            <span style="float: right;"><a href="loginpage.html" style="color: rgb(37, 24, 214)">Sign In</a></span>
+        </div>
+    </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+       
+                <span class="admin-btn" style="float: right;"><a href="loginpage.html" style="color: blue;">Admin Login</a></span>
+               
+
+	</div> 
 
 
-<input type="submit" value="select">
-</form>
+	
+    <!-- SIDENAV -->
+    <div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="Landing_Page.jsp">Home</a>
+    <a href="Registration.jsp">Registration</a>
+    <a href="Login.jsp">Login</a>
+		<a href="Userprofile.jsp">User Profile</a>
+		<a href="AboutUs.jsp">About Us</a>
+    <a href="ContactUs.jsp">Contact Us</a>
 </div>
+     <div class=><img src="onlineexam.jpg"></div>
+   
+
 </body>
+<script src="app.js"></script>
+
 </html>
+    

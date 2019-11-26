@@ -15,13 +15,12 @@ public class LevelService {
 	private LevelRepository levelRepo;
 	
 	
-	public List<Option> fetchOptionsForGivenQu(int qid, int userop) {
+public List<Option> fetchOptionsForGivenQu(int qid) {
 		
-		List<Option> op1 = levelRepo.fetchOptionsForGivenQu(qid, userop);
-		
-		
-		return op1;
+		List<Option> options = levelRepo.fetchOptionsForGivenQu(qid);
 		
 		
+		
+		return options;
 	}
 }
