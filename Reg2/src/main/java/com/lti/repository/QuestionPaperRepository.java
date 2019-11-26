@@ -41,8 +41,10 @@ public class QuestionPaperRepository {
 //	  }
 	
 	
-	  public void save(QuestionPaper qp ){
-          this.entityManager.persist(qp);
+	  public void save(String ans){
+		  QuestionPaper qp=new QuestionPaper();
+		  qp.setAnswer(ans);
+          entityManager.persist(qp);
       }
 	
 	

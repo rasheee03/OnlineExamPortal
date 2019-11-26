@@ -29,7 +29,7 @@ public class QuestionPaper {
 	@JoinColumn(name="examid")
 	private ExamHistory examHistory;
 	
-	private Integer answer;
+	private String answer;
 	
 	
 	public ExamHistory getExamHistory() {
@@ -40,11 +40,11 @@ public class QuestionPaper {
 		this.examHistory = examHistory;
 	}
 
-	public Integer getAnswer() {
+	public String getAnswer() {
 		return answer;
 	}
 
-	public void setAnswer(Integer answer) {
+	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
 

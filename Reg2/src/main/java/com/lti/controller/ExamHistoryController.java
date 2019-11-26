@@ -20,9 +20,9 @@ public class ExamHistoryController {
 	
 
 	 @RequestMapping(path = "eh.lti", method = RequestMethod.POST)
-	 public String examHistory(@RequestParam("id") String id ,Map m)
+	 public String examHistory(Map m)
 	 {
-		 List<ExamHistory> eh= ehService.getDetails(Integer.parseInt(id));
+		 List<ExamHistory> eh= ehService.getDetails(64);
 		 m.put("details", eh);
 		 
 		 return "ExamHistory.jsp";

@@ -30,4 +30,10 @@ public class QuestionPaperService {
 	public List<Question> fetchQuestions(int c){
 		return quesPaperRepo.fetchQuestions(c);
 	}
+	
+	
+	public void save(String ans)
+	{
+		quesPaperRepo.save(ans);
+	}
 }

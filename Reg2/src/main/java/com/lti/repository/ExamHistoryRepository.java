@@ -18,11 +18,11 @@ public class ExamHistoryRepository{
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public List<ExamHistory> get(int c1)
+	public List<ExamHistory> get(int lid)
 	{
-		String s="select eh from ExamHistory eh where cid=:c";
+		String s="select eh from ExamHistory eh where eh.lid=:lid";
 		Query q= entityManager.createQuery(s);
-		q.setParameter("c", c1);
+		q.setParameter("lid", lid);
 		List<ExamHistory> eh=q.getResultList();
 		return eh;
 		

@@ -15,9 +15,9 @@ public class ExamHistoryService {
 	private ExamHistoryRepository ehRepo;
 	
 	
-	public List<ExamHistory> getDetails(int c1)
+	public List<ExamHistory> getDetails(int lid)
 	{
-		List<ExamHistory> eh = ehRepo.get(c1);
+		List<ExamHistory> eh = ehRepo.get(lid);
 		return eh;
 	}
 

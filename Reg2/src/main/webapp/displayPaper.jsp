@@ -8,48 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Question Paper</title>
-  <script language="javascript">
-var tim;       
-        var min = '20';
-        var sec = '30';
-        var f = new Date();
 
-        function customSubmit(someValue){  
-        	 document.questionForm.minute.value = min;   
-        	 document.questionForm.second.value = sec; 
-        	 document.questionForm.submit();  
-        	 }  
-
-        function examTimer() {
-            if (parseInt(sec) >0) {
-
-			    document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds";
-                sec = parseInt(sec) - 1;                
-                tim = setTimeout("examTimer()", 1000);
-            }
-            else {
-
-			    if (parseInt(min)==0 && parseInt(sec)==0){
-			    	document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds";
-				     alert("Time Up");
-				     document.questionForm.minute.value=0;
-				     document.questionForm.second.value=0;
-				     document.questionForm.submit();
-
-			     }
-
-                if (parseInt(sec) == 0) {				
-				    document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds";					
-                    min = parseInt(min) - 1;
-					sec=59;
-                    tim = setTimeout("examTimer()", 1000);
-                }
-
-            }
-        }
-</script>
 </head>
-<body onload="examTimer()"><div id="showtime"></div>
+<body><div id="showtime"></div>
 
 
 <form method="post" action="qp1.lti">

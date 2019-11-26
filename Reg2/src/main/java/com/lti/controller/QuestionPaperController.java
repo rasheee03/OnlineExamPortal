@@ -47,8 +47,9 @@ public class QuestionPaperController {
 	    
 	 }
 	 @RequestMapping(path = "qp1.lti", method = RequestMethod.POST)
-	 public String questionPaper(Map m,ModelMap model)
+	 public String questionPaper(Map m,ModelMap model,@RequestParam("selected_ans")String ans)
 	 {
+		 
 		 int size=q1.size()-1;
 		//List<Question> q1=quesPaperService.fetchQuestions(Integer.parseInt(id));
 		m.put("question", q1.get(++index));

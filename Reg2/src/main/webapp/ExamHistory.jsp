@@ -7,13 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form method="get" action="eh.lti">
 <table align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
 	<c:forEach items="${details}" var="q">
-		
-	
 		<tr>
+		<td>Course Name</td>
+		<td>Score</td>
+		</tr>
+		<tr>
+			<td>${q.course.getName()}</td>
 			<td>${q.getResult()}</td>
-			<td>${q.getLid()}</td>
+		
 		</tr>
 		
 	</c:forEach>
