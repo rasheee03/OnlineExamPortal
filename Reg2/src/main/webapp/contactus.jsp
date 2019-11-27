@@ -162,33 +162,23 @@ body{
 <body>
     <h1>Contact Us</h1>
         <div class="container">
-                <form action="action_page.html">
+                <form action="contact.lti" method="post">
               
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name..">
               
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              
-                  <label for="state">State</label>
-                  <select id="state" name="state">
-                    <option value="delhi">Delhi</option>
-                    <option value="maharashta">Maharashtra</option>
-                    <option value="gujurat">Gujurat</option>
-                    <option value="uttarpradesh">Uttar Pradesh</option>
-                    <option value="jammu&kashmir">Jammu&Kashmir</option>
-
-                  </select>
-              
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              		<label for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
               
                   <input type="submit" value="Submit"><br><br>
               
 
-                  <a href = "Landing_Page.jsp">Home </a><br><br>
+                  <a href = "home.jsp">Home </a><br><br>
 
-<a href = "Login.jsp">Existing User?Login </a><br><br>
+
 
                 </form>
               </div>

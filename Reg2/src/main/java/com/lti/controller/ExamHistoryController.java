@@ -19,13 +19,13 @@ public class ExamHistoryController {
 	private ExamHistoryService ehService;
 	
 
-	 @RequestMapping(path = "eh.lti", method = RequestMethod.POST)
+	 @RequestMapping(path = "eh.lti")
 	 public String examHistory(Map m)
 	 {
 		 List<ExamHistory> eh= ehService.getDetails(64);
-		 m.put("details", eh);
+		 m.put("e", eh);
 		 
-		 return "ExamHistory.jsp";
+		 return "exam_history.jsp";
 		 
 	 }
 	 

@@ -15,9 +15,13 @@ public class ContactRepository {
 	private EntityManager entityManager;
 	
 @Transactional
-	public void addContact(ContactUs c)
+	public void addContact(String name,String email,String message)
 	{
-		entityManager.persist(c);
+	ContactUs c=new ContactUs();
+	c.setName(name);
+	c.setEmail(email);
+	c.setMessage(message);
+	entityManager.persist(c);
 		
 			
 	}

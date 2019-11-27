@@ -19,21 +19,18 @@ public class ContactUs {
 	private int id ;
 	private String name;
 	private String email;
-	private long mobile;
-	private int message ;
+	private String message ;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	public long getMobile() {
-		return mobile;
+	public String getName() {
+		return name;
 	}
-	public void setMobile(long mobile) {
-		this.mobile = mobile;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -41,12 +38,12 @@ public class ContactUs {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getMessage() {
+	public String getMessage() {
 		return message;
 	}
-	public void setMessage(int message) {
+	public void setMessage(String message) {
 		this.message = message;
 	}
+	
 	
 }

@@ -3,7 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Questions</title>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+
 <script type="text/javascript">
 	function fun(){
 		if(document.getElementById("chkOp1").checked==true){
@@ -51,18 +54,40 @@
 		//document.getElementById("res").innerHTML=document.getElementById("chkOp1").value;
 	}
 </script>
+
+<style>
+body
+{
+background:#AEE4FF;
+}
+
+.form-style-10{
+	padding:80px;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+
+
+</style>
 </head>
 <body>
-<form method="post" action="question.lti" >
-Enter Question <input type="text" name="question" /> <br /> 
+<div class ="form-style-10">
+<form  method="post" action="question.lti" >
+Question &nbsp &nbsp &nbsp<input type="text" name="question" /> <br /> 
 
-Options:
-<input type="radio" id="chkOp1" name="chkOp"  onclick="fun()"  for="options[0].description"> <input type="text" name = "options[0].description" id="lbl1"><br/> 
-<input type="radio" id="chkOp2" name="chkOp"   onclick="fun()"  for="options[1].description"><input type="text" name = "options[1].description" id="lbl2"><br/>
-<input type="radio" id="chkOp3" name="chkOp"   onclick="fun()"  for="options[2].description"><input type="text" name = "options[2].description" id="lbl3"><br/>
-<input type="radio" id="chkOp4" name="chkOp"  onclick="fun()" for="options[3].description"><input type="text" name = "options[3].description" id="lbl4"><br/>
 
-<input type="text" name="correct_ans" id="opt" value="res opt"/>
+Option 1:<input type="radio" id="chkOp1" name="chkOp"  onclick="fun()"  for="options[0].description"> <input type="text" name = "options[0].description" id="lbl1"><br/> 
+Option 2:<input type="radio" id="chkOp2" name="chkOp"   onclick="fun()"  for="options[1].description"><input type="text" name = "options[1].description" id="lbl2"><br/>
+Option 3:<input type="radio" id="chkOp3" name="chkOp"   onclick="fun()"  for="options[2].description"><input type="text" name = "options[2].description" id="lbl3"><br/>
+Option 4:<input type="radio" id="chkOp4" name="chkOp"  onclick="fun()" for="options[3].description"><input type="text" name = "options[3].description" id="lbl4"><br/>
+
+<input type="text" name="correct_ans" id="opt" value="answer"/>
 
 <input type="radio"  name="level" value="1" id="l1"></input>  level 1
  <input type="radio"  name="level" value="2"  id="l2"></input> level 2
@@ -82,10 +107,8 @@ Options:
  <button type="submit" > Add Question</button>
  <div id="res">
  	 
- 	 
- 	 
- 	 
- </div>
+</div>
+</div>
 </form>
 
 </body>

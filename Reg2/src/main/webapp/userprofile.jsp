@@ -9,18 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
-    <style type="text/css">
-        #ProfilePage
-        {
-            /* Move it off the top of the page, then centre it horizontally */
-            margin: 50px auto;
-            width: 635px;
-        
-        /* For visibility. Delete me */
-        border: 1px solid red;
-        }
+        <style type="text/css">
+
+body
+{
+background:#AEE4FF;
+}
         
         #LeftCol
         {
@@ -56,13 +50,16 @@
         border: 1px solid brown;
         }
         
-        #Info
+        #info
         {
+        max-width:450px;
+	padding:10px;
+	margin:30px auto;
             width: 400px;
             text-align: center;
         
             /* Move it to the right */
-            float: right;
+           
         
         /* For visibility. Delete me */
         border: 1px solid blue;
@@ -88,16 +85,11 @@
         border: 1px solid purple;
         }
         </style>
-        
-      <!--  <div id="ProfilePage">
-            <div id="LeftCol">
-                <div id="Photo"></div>
-                <div id="ProfileOptions">
-                a
-                </div>
-            </div>-->
-        
-            <div id="Info">
+</head>
+<body>
+
+ 
+            <div id="info">
                 <p>
                     <strong>Name:</strong>
                     <span>Mayank</span>

@@ -49,8 +49,11 @@ public class QuestionPaperController {
 		
 		 List<Question> qs = (List<Question>) model.get("questions");
 		 Integer qno = (Integer) model.get("qno");
-		 int size=qs.size();
+		 int size=qs.size()-1;
+		 System.out.println(size);
+		
 		 model.put("question", qs.get(++qno));
+		 System.out.println(qno);
 		 model.addAttribute("qno",qno);
 		
 		return "displayPaper.jsp";

@@ -9,10 +9,27 @@
 <title> About Us </title>
 
 <link rel = "stylesheet" type = "text/css" href = "style.css">
-<body>
-    <div class = "loginbox1">
+
+<style>
+.container
+{
+max-width:450px;
+	padding:30px;
+	margin:40px auto;
+}
+
+body
+{
+background:#AEE4FF;
+}
+</style>
+</head>
+
+
+<body bgcolor="#AEE4FF">
+    <div class = "container">
 <h1> About us </h1>
-<form>
+<div>
 <p><b>Examination Process</b></p>
 <h5>The procedures shown below are meant to be done as part of the regular activities of an examination
     program as a way to ensure the quality of, and confidence in, the results. The ordering of the
@@ -28,12 +45,11 @@
     Please note that for calculating aggregate marks, marks of all the levels mentioned on the mark sheets will be taken into consideration.</h5><br><br>
 
 
-<a href = "index.html">Home </a><br><br>
+<a href = "home.jsp">Home </a><br><br>
 
-<a href = "Login.jsp">Existing User?Login </a><br><br>
+</div>
 
 
-</form>
 </div>
 </body>
 </head>

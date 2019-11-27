@@ -12,9 +12,9 @@ public class ContactService {
 	@Autowired
 	private ContactRepository contactRepo;
 	
-	public void add(ContactUs c) {
+	public void add(String name,String email,String message) {
 		
-	contactRepo.addContact(c);
+	contactRepo.addContact(name,email,message);
 
 	
 		}

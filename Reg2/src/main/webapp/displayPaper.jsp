@@ -8,18 +8,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Question Paper</title>
+<style>
+body{
+background:#AEE4FF;
+}
 
+
+
+</style>
 </head>
-<body><div id="showtime"></div>
-
-
+<body>
 <form method="post" action="qp1.lti">
 <h1 align="center" style="color:Blue"><font><strong>Questions</strong></font></h1>
 <div style="border:solid 2px black;display:inline-block;"></div>
-
- <table  align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
+<table  align="center" style="color:red" cellpadding="10" cellspacing="10" border="2.2">
 		
-<h1>Q.no ${ sessionScope.qno + 1 } </h1> 
+<h1>Q.no ${ sessionScope.qno+1  } </h1> 
 	 	
 		<tr>
 		<td >${question.getQuestion()}</td>
@@ -30,7 +34,7 @@
 		</tr>
 		</c:forEach>
 		
-		<%if (request.getAttribute("qno").equals(request.getAttribute("size")))
+		<%if (request.getAttribute("qno")==request.getAttribute("size"))
 		{%>
 
 <button type="submit"><a href="result.jsp">SUBMIT</a>
@@ -43,6 +47,5 @@ else
 <%} %>
  
 </table> 
-
 </form>
 </body>

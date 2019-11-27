@@ -224,11 +224,12 @@ function closeNav() {
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-         <a href="home.jsp">Home</a>
-         <a href="aboutus.jsp">About</a>
-        <a href="contactus.jsp">Contact Us</a>
+        <a href="home.jsp">Home</a>
+        <a href="aboutus.jsp">About</a>
+        
        
-        <a href="userprofile.jsp">User Profile</a>
+        <a href="contactus.jsp">Contact</a>
+         <a href="userprofile.jsp">User Profile</a>
     </div>
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -238,18 +239,24 @@ function closeNav() {
     <div class="form-style-10-1">
     <h1>Exam history</h1>
     </div>
-  <form class="form-container">
+    
+    
+    <div class="form-style-10">
+        <h1></h1>
+        <img path="logo-online-test.png"/>
+
+        <form class="form-container">
             <div class="label-container">
                 <span style="color: #000;">Course :</span>
-                <span>$(e.course.getName())</span>
+                <span>JAVA</span>
             </div>
            <div class="label-container">
                <span style="color: #000;">Test Date :</span>
-               <span>$(e.getExamDate())</span>
+               <span>14-11-2019</span>
            </div>
             <div class="label-container">
                 <span style="color: #000;">Score :</span>
-                <span>$(e.getResult())</span>
+                <span>75</span>
             </div>
             <div class="label-container">
                 <span style="color: #000;">Remark :</span>
@@ -257,7 +264,33 @@ function closeNav() {
             </div>
         
 </form>
- 
-  
+    </div>
+    
+    
+    
+        <div class="form-style-10">
+        <h1></h1>
+        <img path="logo-online-test.png"/>
+
+        <form class="form-container">
+            <div class="label-container">
+                <span style="color: #000;">Course :</span>
+                <span>DBMS</span>
+            </div>
+           <div class="label-container">
+               <span style="color: #000;">Test Date :</span>
+               <span>10-09-2019</span>
+           </div>
+            <div class="label-container">
+                <span style="color: #000;">Score :</span>
+                <span>80</span>
+            </div>
+            <div class="label-container">
+                <span style="color: #000;">Remark :</span>
+                <span>PASS</span>
+            </div>
+        
+</form>
+    </div>
 </body>
 </html>
